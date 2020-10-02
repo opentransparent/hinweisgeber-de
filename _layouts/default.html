@@ -15,11 +15,11 @@
 {{ page.signon-message }}
 </p>
 <div class="signon">
-<a class="signbutton" id="signon" href="#signonform">Sign On</a>
+<a class="signbutton" id="signon" href="#signonform">Unterzeichnen</a>
 </div>
-<p class="signonalt">(Alternatively, email: <a href="mailto:{{ page.email }}">{{ page.email }}</a>)
+<p class="signonalt">(Oder schicke eine E-Mail an <a href="mailto:{{ page.email }}">{{ page.email }}</a>)
 </p>
-<p>Signed (in alphabetical order):</p>
+<p>Unterzeichner (in alphabetischer Ordnung):</p>
 <ol class="signatories">
     {% for person in site.data.names %}
     <li><span class="name">{{ person.name }}</span></li>
@@ -29,10 +29,10 @@
 </div>
 <a name="signonform"></a>
 <div id="signonform">
-    <div class="title">Sign the Letter</div>
+    <div class="title">Die Initiative unterstützen </div>
     <form action="https://formsubmit.co/{{ page.email }}" method="POST">
         <div>
-        <label for="name">Full Name:</label>
+        <label for="name">Vorname und Name:</label>
         <input id="name" type="text" name="name" placeholder="Dr Joe Bloggs"></input>
         </div>
         <div>
@@ -45,10 +45,10 @@
         <input type="hidden" name="_next" value="{{ site.url }}/thankyou.html">
         <input type="hidden" name="_replyto">
         <div class="buttondiv">
-        <input class="button" type="submit" value="Send"></input>
+        <input class="button" type="submit" value="Abschicken"></input>
     </div>
     </form>
-    <p>Submissions will be manually verified before being added. Submission does not guarantee addition to the list of signatories.</p>
+    <p>Unterschriften werden vor dem Hinzufügen manuell überprüft. Die Einreichung garantiert keine Aufnahme in die Liste der Unterzeichner.</p>
     <p><a href="privacy.html">Privacy Policy</a></p>
 </div>
 </body>
