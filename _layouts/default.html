@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+
+<body>
+<div class="page">
+<div class="title">
+{{ page.pagetitle }}
+</div>
+{{ content }}
+
+<p class="signon">
+{{ page.signon-message }}
+</p>
+<div class="signon">
+<a class="signbutton" id="signon" href="#signonform">Sign On</a>
+</div>
+<p class="signonalt">(Alternatively, email: <a href="mailto:{{ page.email }}">{{ page.email }}</a>)
+</p>
+<p>Signed (in alphabetical order):</p>
+<ol class="signatories">
+    {% for person in site.data.names %}
+    <li><span class="name">{{ person.name }}</span></li>
+{% endfor %}
+</ol>
+
+</div>
+<a name="signonform"></a>
+<div id="signonform">
+    <div class="title">Sign the Letter</div>
+    <form action="https://formsubmit.co/{{ page.email }}" method="POST">
+        <div>
+        <label for="name">Full Name:</label>
+        <input id="name" type="text" name="name" placeholder="Dr Joe Bloggs"></input>
+        </div>
+        <div>
+        <label for="email">Email:</label>
+        <input id="email" type="email" name="email" placeholder="someone@example.com"></input>
+        </div>
+        <input type="hidden" name="_subject" value="Sign Request">
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="{{ site.url }}/thankyou.html">
+        <input type="hidden" name="_replyto">
+        <div class="buttondiv">
+        <input class="button" type="submit" value="Send"></input>
+    </div>
+    </form>
+    <p>Submissions will be manually verified before being added. Submission does not guarantee addition to the list of signatories.</p>
+    <p><a href="privacy.html">Privacy Policy</a></p>
+</div>
+</body>
+</html>
