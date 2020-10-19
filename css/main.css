@@ -100,8 +100,8 @@ body {
 
 .signon>a {
   text-decoration: none;
-  background-color: lightgray;
-  color: darkslategray;
+  background-color: rgb(50, 151, 203);
+  color: rgb(0, 101, 153);
   font-size: 18pt;
   font-weight: bold;
   padding: 8px;
@@ -109,7 +109,7 @@ body {
   display: inline-block;
   border-style: solid;
   border-width: 2px;
-  border-color: darkslategray;
+  border-color: rgb(0, 101, 153);
 }
 
 .signon>a:hover {
@@ -126,7 +126,7 @@ body {
 #signonform {
   height: 100vh;
   margin-top: 300px;
-  background-color: gainsboro;
+  background-color: rgb(100, 201, 253);
   padding: 20px;
   font-size: 20pt;
 }
@@ -153,20 +153,20 @@ body {
 }
 
 #signonform .button {
-  background-color: lightgray;
+  background-color: rgb(50, 151, 203);
   color: darkslategray;
   font-size: 20pt;
   font-weight: bold;
   padding: 8px;
   border-style: solid;
   border-width: 2px;
-  border-color: darkslategray;
+  border-color: rgb(0, 101, 153);
 }
 
 #signonform .button:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   color: lightgray;
-  background-color: slategray;
+  background-color: rgb(0, 101, 153);
 }
 
 #signonform .title {
